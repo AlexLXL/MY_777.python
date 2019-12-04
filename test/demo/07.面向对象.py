@@ -7,7 +7,7 @@ class People(object):
     def print_score(self):
         print("姓名：%s     成绩：%s" % (self.name, self.score))
 
-    def get_password(self):
+    def get_password(self): # 获取私有属性
         return self.__password
 
     def set_password(self, password):
@@ -18,7 +18,7 @@ class People(object):
 
 
 class Student(People):
-    def run(self):
+    def run(self):      # 多态
         print('学生跑步..')
 
     def go_to_school(self):
@@ -31,6 +31,10 @@ class Tacher(object):   # 类属性，通过类名.类属性访问
     def __init__(self, name):
         self.name = name
         Tacher.count += 1
+
+
+class Scientists(object):
+    __slots__ = ('name', 'age')     # 当前类实例允许绑定的属性名称，继承的子类不受限制
 
 
 king = People('tom', 20, 'L123456')
@@ -47,4 +51,6 @@ print(jack.__dict__)
 jack.run()              # 多态，继承后重写
 jack.go_to_school()
 
-
+s1 = Scientists()
+s1.name = '测试'
+# s1.score = 1
