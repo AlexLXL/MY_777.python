@@ -15,7 +15,7 @@ print(nameList)
 nameTuple = (1, 2, 3)
 nameTuple2 = (1,)  # 区别括号和元组
 
-# 对象（dict字典）- 比js严谨，键值加单引号，添加使用tomDict['sex'] = '男'
+# 对象（dict字典）- 比js严谨，键值加单引号，添加使用tomDict['sex'] = '男'*
 tomDict = {'name': 'tom', 'age': 18}
 print(tomDict)
 tomDict['sex'] = '男'

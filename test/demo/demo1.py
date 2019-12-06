@@ -1,3 +1,5 @@
+import pickle
+
 print('hello Python!')
 
 count = 1024 * 768
@@ -18,3 +20,5 @@ print(len("alex"))  # len()获取字符串、数组长度
 print(' alex  '.strip())    # strip()去除前后特定字符串(传参)，默认空格 ## 等效前端的trim（）
 print('AxCC'.lower())       # 小写
 print("整数%d，浮点数%f，字符串%s" % (100, 3.14, '测试string'))  # 格式化字符串 - 整数%d，浮点数%f，字符串%s，十六进制帧数%x，如果不知道数据具体类型，可以统一使用%s
+
+
