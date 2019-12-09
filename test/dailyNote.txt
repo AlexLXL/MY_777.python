@@ -1,0 +1,17 @@
+2019/12/09
+from imp import reload
+reload(test) // 重新导入(模块动态更新后再导入一次)
+
+== 和 is
+==：判断值
+is: 判断内存     id(arr）可以看内存地址
+
+深拷贝:import copy
+c = copy.deepcopy(a)
+浅拷贝: import copy
+c = copy.copy(a)// 只克隆一层(可变类型)、不拷贝(不可变类型)
+
+c = a也是浅拷贝
+
+
+
