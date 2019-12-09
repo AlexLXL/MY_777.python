@@ -1,18 +1,22 @@
-from multiprocessing import Process
-from multiprocessing import Pool
-import os, time, random, subprocess
+import os
+import random
+import subprocess
+import time
+from multiprocessing import Pool, Process
+
 
 # window下新建进程可使用Process
 def run_proc(name):
-    print('The Child %s Process pid is %s, parent is %s' % (name, os.getpid(), os.getppid()))   # 获取线程pid，如果要获取父进程使用os.getppid()
+    # 获取线程pid，如果要获取父进程使用os.getppid()
+    print('The Child %s Process pid is %s, parent is %s' % (name, os.getpid(), os.getppid()))
 
 
-# if __name__ == '__main__':
-#     print('开始..')
-#     p1 = Process(target=run_proc, args=('newProcess',))     # args传的是元组
-#     p1.start()
-#     p1.join()       # 进程p1执行完才执行下面的，多用于进程的同步
-#     print('结束..')
+if __name__ == '__main__':
+    print('开始..')
+    p1 = Process(target=run_proc, args=('newProcess',))     # args传的是元组
+    p1.start()
+    p1.join()       # 进程p1执行完才执行下面的，多用于进程的同步
+    print('结束..')
 
 
 # 进程池

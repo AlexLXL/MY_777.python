@@ -62,7 +62,7 @@ class Scientists(object):
 # @property装饰器就是负责把一个方法变成属性调用的：    @weight.setter把方法变成属性修改
 class Dog(object):
     def __init__(self):
-        self.weight = 0
+        self._weight = 0
 
     @property
     def weight(self):  # 函数名和属性名一致
